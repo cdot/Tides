@@ -1,19 +1,19 @@
 # Tides
-Generation of calendars from the Bangor University tide tables for North Wales and the north west. Supports generation of ICS files, and can be imported into AppScript to update a Google calendar.
+[Bangor University Centre for Applied Marine Science](https://cams.bangor.ac.uk/contact.php.en) generously share their annual tidal predictions for a selection of ports around North Wales - Liverpool, Conwy, Beaumaris, Menai Bridge, Port Dinorwic, and Caernarfon. SCUBA divers find this information invaluable for planning diving, as we plan our diving many months in advance. Of particular importance is the occurrence of Spring and Neap tides, as they generally offer the longest slack windows, best suited for diving. This module supports the creation of calendars of Spring and Neap tides, though the generation of ICS files. The code can also be imported into AppScript to manipulate a Google calendar directly.
 
 ## Generating a .ics file
-When run under node.js, use
+Clone the repository and install dependencies. Then run the bin script:
 ```
+git clone https://github.com/cdot/Tides.git
+cd Tides
+npm install
 node bin/gen_ics.js
 ```
-which will output ICS data to the console. Redirect it into a file, and import
-it to your calendar app.
+This will output ICS data for neap and spring tides to the console. Redirect it into a file, and import it to your calendar app.
 
 ## Running in Appscript
-You can create a script that will automatically update a Google Calendar.
+You can create a script that will automatically update a Google Calendar. Clone the repository as described above, then
 ```
-git clone 
-npm install
 npm run appscript
 ```
 + In Google Drive, create a new AppScript file.
@@ -23,7 +23,7 @@ npm run appscript
 + Switch to Code.gs, delete eveyrthing there and paste:
 ```
 function createCalendar() {
-   createTideCalendar("Liverpool", "eq470905jlkdfi095098silf4o@group.calendar.google.com");
+   createTideCalendar("Liverpool", "eq470fggslkdf44ff5098silf4o@group.calendar.google.com");
 }
 ```
 + Replace the second parameter to `updateTideCalendar` with your calendar ID.
