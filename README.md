@@ -1,9 +1,11 @@
 # Tides
-[Bangor University Centre for Applied Marine Science](https://cams.bangor.ac.uk/contact.php.en) generously share their annual tidal predictions for a selection of ports around North Wales - Liverpool, Conwy, Beaumaris, Menai Bridge, Port Dinorwic, and Caernarfon.
+[Bangor University Centre for Applied Marine Science](https://cams.bangor.ac.uk/contact.php.en) generously share their annual tidal predictions for a selection of ports near the university - Liverpool, Conwy, Beaumaris, Menai Bridge, Port Dinorwic, and Caernarfon.
 
 SCUBA divers find this information invaluable for planning diving, as we plan our diving many months in advance. Of particular importance is the occurrence of Spring and Neap tides, as they generally offer the longest slack windows, best suited for diving.
 
 This module supports the creation of calendars of Spring and Neap tides based on the Bangor tables, though the generation of [ICS](https://en.wikipedia.org/wiki/ICalendar) files. The code can also be imported into [AppScript](https://developers.google.com/apps-script) to manipulate a Google calendar directly.
+
+The author is not in any way associated with Bangor University, and is not aware of any copyright or other restriction on the public data downloaded from the [Bangor University CAMS website](https://www.cams.bangor.ac.uk/dataproducts/local_forecasts/local_support_frameset.htm). 
 
 ## Generating a .ics file
 Clone the repository and install dependencies. Then run the bin script:
