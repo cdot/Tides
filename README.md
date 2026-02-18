@@ -6,6 +6,8 @@ Fortunately [Bangor University Centre for Applied Marine Science](https://cams.b
 
 This module supports the creation of calendars of Spring and Neap tides based on the Bangor tables, though the generation of [ICS](https://en.wikipedia.org/wiki/ICalendar) files. The code can also be imported into [AppScript](https://developers.google.com/apps-script) to manipulate a Google calendar directly.
 
+The author is not in any way associated with Bangor University, and is not aware of any copyright or other restriction on the public data downloaded from the [Bangor University CAMS website](https://www.cams.bangor.ac.uk/dataproducts/local_forecasts/local_support_frameset.htm). 
+
 ## Generating a .ics file
 Clone the repository and install dependencies. Then run the bin script:
 ```
