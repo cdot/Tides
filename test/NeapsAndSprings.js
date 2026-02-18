@@ -3,7 +3,7 @@
 import { assert } from "chai";
 import Tide from "../src/Tide.js";
 import Day from "../src/Day.js";
-import NeapsAndSprings from "../src/NeapsAndSprings.js";
+import findNeapsAndSprings from "../src/NeapsAndSprings.js";
 
 const tides = [
   new Day(
@@ -426,15 +426,17 @@ const tides = [
 ];
 
 describe("NeapsAndSprings", () => {
-  it ("works", () => {
-    const ns = new NeapsAndSprings(tides);
-    assert.equal(ns.neaps.length, 3);
-    assert.equal(ns.neaps[0].date.toISOString(), "2026-01-14T00:00:00.000Z");
-    assert.equal(ns.neaps[1].date.toISOString(), "2026-01-28T00:00:00.000Z");
-    assert.equal(ns.neaps[2].date.toISOString(), "2026-02-12T00:00:00.000Z");
-    assert.equal(ns.springs.length, 3);
-    assert.equal(ns.springs[0].date.toISOString(), "2026-01-05T00:00:00.000Z");
-    assert.equal(ns.springs[1].date.toISOString(), "2026-01-22T00:00:00.000Z");
-    assert.equal(ns.springs[2].date.toISOString(), "2026-02-03T00:00:00.000Z");
+  it ("neaps and springs", () => {
+    findNeapsAndSprings(tides);
+    const ns = tides.filter(t => t.type === -1);
+    assert.equal(ns.length, 3);
+    assert.equal(ns[0].date.toISOString(), "2026-01-14T00:00:00.000Z");
+    assert.equal(ns[1].date.toISOString(), "2026-01-28T00:00:00.000Z");
+    assert.equal(ns[2].date.toISOString(), "2026-02-12T00:00:00.000Z");
+    const sp = tides.filter(t => t.type === 1);
+    assert.equal(sp.length, 3);
+    assert.equal(sp[0].date.toISOString(), "2026-01-05T00:00:00.000Z");
+    assert.equal(sp[1].date.toISOString(), "2026-01-22T00:00:00.000Z");
+    assert.equal(sp[2].date.toISOString(), "2026-02-03T00:00:00.000Z");
   });
 });

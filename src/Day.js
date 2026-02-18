@@ -27,14 +27,34 @@ export default class Day {
      * @member {number}
      */
     this.range = Math.max(...depths) - Math.min(...depths);
+
+    /**
+     * True if there is spring tide on this day.
+     * @member {number} -1=neap, 1=spring, undefined=neither.
+     */
+    this.type = undefined;
+  }
+
+  /**
+   * Generate a long string for inclusion in a description
+   * @return {string} a tide string
+   */
+  toDescription() {
+    return `Tides on ${this.date.toISOString().replace(/T.*$/, "")}\n`
+    + this.tides.map(a => a.toDescription()).join("\n");
   }
 
   /**
    * Generate a cleanly formatted tide for inclusion in a calendar
    * @return {string} a tide string
    */
-  toString() {
-    return `Tides on ${this.date.toISOString().replace(/T.*$/, "")}\n`
-    + this.tides.map(a => a.toString()).join("\n");
+  toTitle() {
+    return this.tides.map(a => a.toTitle()).join(" ");
   }
 };
+
+/**
+ * AppScript doesn't support static
+ */
+Day.NEAP = -1;
+Day.SPRING = 1;

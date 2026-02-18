@@ -10,18 +10,6 @@ import Fetch from "./Fetch.js";
 export default class BangorTables {
 
   /**
-   * Lat/Long of tidal prediction sites
-   */
-  static locations = {
-    "Liverpool":     [ 53.4555809, -3.0224621 ],
-    "Menai Bridge":  [ 53.222816,  -4.1621462 ],
-    "Port Dinorwic": [ 53.1837381, -4.2161348 ],
-    "Conwy":         [ 53.2957327, -3.849208 ],
-    "Caernarfon":    [ 53.1399465, -4.2794888 ],
-    "Beaumaris":     [ 53.2609341, -4.0951639 ]
-  };
-
-  /**
    * @param {string} site site name, one of "Liverpool", "Menai Bridge",
    * "Port Dinorwic", or "Conwy"
    * @param {string} when must be "present" or "next", default is "present"
@@ -152,3 +140,16 @@ export default class BangorTables {
     });
   }
 }
+
+/**
+ * Lat/Long of tidal prediction sites
+ * AppScript doesn't support static
+ */
+BangorTables.locations = {
+  "Liverpool":     [ 53.4555809, -3.0224621 ],
+  "Menai Bridge":  [ 53.222816,  -4.1621462 ],
+  "Port Dinorwic": [ 53.1837381, -4.2161348 ],
+  "Conwy":         [ 53.2957327, -3.849208 ],
+  "Caernarfon":    [ 53.1399465, -4.2794888 ],
+  "Beaumaris":     [ 53.2609341, -4.0951639 ]
+};

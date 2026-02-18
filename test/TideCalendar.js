@@ -5,7 +5,7 @@ import createTideCalendar from "../src/TideCalendar.js";
 
 describe("iCal", () => {
   it("generates tides", () => {
-    return createTideCalendar("Liverpool")
+    return createTideCalendar({site: "Liverpool"})
     .then(tc => console.log(tc.toString()));
   });
 });

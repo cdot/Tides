@@ -28,14 +28,24 @@ export default class Tide {
   }
 
   /**
-   * Generate a cleanly formatted tide for inclusion in a calendar
+   * Generate a long string for inclusion in a description
    * @return {string} a tide string
    */
-  toString() {
+  toDescription() {
     return (this.high ? "H " : "L ")
     + this.time.toISOString().replace(
       /^.*T(\d\d:\d\d):\d\d\.\d+(.*)$/, "$1$2 ")
     + this.depth + "m";
+  }
+
+  /**
+   * Generate a compact string for inclusion in a calendar title
+   * @return {string} a tide string
+   */
+  toTitle() {
+    return (this.high ? "H" : "L")
+    + this.time.toISOString().replace(
+      /^.*T(\d\d:\d\d):\d\d\.\d+(.*)$/, "$1");
   }
 };
 
