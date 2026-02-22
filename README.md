@@ -1,6 +1,6 @@
 # North Wales Tides
 
-As SCUBA divers we plan our diving many months in advance. Of particular importance is the occurrence of Spring and Neap tides, as they generally offer the longest slack windows, best suited for diving. Obtaining tidal predictions that far in advance is a real challenge, as most sites allow free access a mere 7 days in advance. A few offer 28 day predictions, but we really need 12 months. The [National Oceanography Centre](https://noc-innovations.com/) Poltips software would gives us that, but it's beyond the budget of a small volunteer dive club.
+As SCUBA divers we plan our diving many months in advance. Of particular importance is the occurrence of Spring and Neap tides, as they generally offer the longest slack windows, best suited for diving. Obtaining tidal predictions that far in advance is a real challenge, as most sites allow free access a mere 7 days in advance. A few offer 28 day predictions, but we really need 12 months. The [National Oceanography Centre](https://noc-innovations.com/) Poltips software would gives us that, but it's beyond the budget of a small volunteer dive club. It would be a violation of copyright to scan (or otherwise copy) printed tide tables, despite their being very reasonably priced.
 
 Fortunately [Bangor University Centre for Applied Marine Science](https://cams.bangor.ac.uk/contact.php.en) generously share their annual tidal predictions for a selection of ports around North Wales - Liverpool, Conwy, Beaumaris, Menai Bridge, Port Dinorwic, and Caernarfon.
 
